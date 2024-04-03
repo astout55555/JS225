@@ -1,9 +1,11 @@
 "use strict";
 
-// using object destructuring to extract the two functions from returned object
+// when a module is `require`d, the code in the file is executed and then
+// only the value of its module.exports prop is returned (typically an object).
+// here we use object destructuring to extract the two functions from the object
 const { logIt, setPrefix } = require("./logit");
-// the `./` at the start tells Node to look inside the project folder
-// if a module were installed with NPM usually that wouldn't be needed
+// the `./` at the start tells Node to look inside the project folder--
+// if a module were installed with NPM usually that wouldn't be needed.
 logIt('You rock!');
 setPrefix('++ ');
 logIt('You rock!');
